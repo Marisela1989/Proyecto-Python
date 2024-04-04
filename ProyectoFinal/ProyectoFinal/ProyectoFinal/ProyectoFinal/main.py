@@ -70,17 +70,44 @@ class mdiApp(QMainWindow):
         self.winEmpleado=winEmpleado()
         self.uiMdi.mdiArea.addSubWindow(self.winEmpleado)
         self.winEmpleado.show()
-                
+        
+    def openWinDepartamento(self):
+        self.winDepartamento=winDepartamento()
+        #agregar la ventana al mdi
+        self.uiMdi.mdiArea.addSubWindow(self.winDepartamento)
+        #eventos
+        self.winDepartamento.show()    
+        
+    def openWinAsignacion(self):
+        self.winAsignacion=winAsignacion()
+        #agregar la ventana al mdi
+        self.uiMdi.mdiArea.addSubWindow(self.winAsignacion)
+        #eventos
+        self.winAsignacion.show()       
+
 class winUsuario(QWidget):
     def __init__(self):
         super().__init__()
         self.uiUsuario=Ui_Usuario()
         self.uiUsuario.setupUi(self)
+
 class winEmpleado(QWidget):
     def __init__(self):
         super().__init__()
         self.uiEmpleado=Ui_Empleado()
-        self.uiEmpleado.setupUi(self)        
+        self.uiEmpleado.setupUi(self)   
+
+class winDepartamento(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.uiDepartamento=Ui_Departamento()
+        self.uiDepartamento.setupUi(self)           
+        
+class winAsignacion(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.uiAsignacion=Ui_AsignacionBienes()
+        self.uiAsignacion.setupUi(self) 
         
 if __name__=="__main__":
     app=QApplication(sys.argv)
