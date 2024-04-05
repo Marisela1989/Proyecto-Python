@@ -52,11 +52,11 @@ class mdiApp(QMainWindow):
         retval=msg.exec()
         
     def guardarUsuario(self):
-        self.msgBox("Datos Guardados Correctamente",QMessageBox.Information)
+        self.msgBox("Datos del usuario guardados correctamente",QMessageBox.Information)
     def modificarUsuario(self):
-        self.msgBox("Datos Modificados Correctamente",QMessageBox.Information)  
+        self.msgBox("Datos del usuario modificados correctamente",QMessageBox.Information)  
     def eliminarUsuario(self):
-        self.msgBox("Datos Eliminados Correctamente",QMessageBox.Information) 
+        self.msgBox("Datos del usuario eliminados correctamente",QMessageBox.Information) 
         
     def openWinEmpleado(self):
         self.winEmpleado=winEmpleado()
@@ -76,9 +76,9 @@ class mdiApp(QMainWindow):
                         self.winEmpleado.uiEmpleado.txtFechaIngreso.text()
                         )
         if empleado.guardar() == 1:
-            self.msgBox("Datos Guardados Correctamente", QMessageBox.Information)
+            self.msgBox("Datos del empleado guardados correctamente", QMessageBox.Information)
         else:
-            self.msgBox("Error al Guardar los Datos", QMessageBox.Warning)
+            self.msgBox("Error al guardar los datos del empleado", QMessageBox.Warning)
             
     def modificarEmpleado(self):
         empleado=Empleados(self.winEmpleado.uiEmpleado.txtCedula.text(),
@@ -90,9 +90,9 @@ class mdiApp(QMainWindow):
                         self.winEmpleado.uiEmpleado.txtFechaIngreso.text()
                         )
         if empleado.modificar() == 1:
-            self.msgBox("Datos Guardados Correctamente", QMessageBox.Information)
+            self.msgBox("Datos del empleado modificados correctamente" , QMessageBox.Information)
         else:
-            self.msgBox("Error al Guardar los Datos", QMessageBox.Warning) 
+            self.msgBox("Error al modificar los datos del empleado", QMessageBox.Warning) 
     def eliminarEmpleado(self):
         empleado=Empleados(self.winEmpleado.uiEmpleado.txtCedula.text(),
                         self.winEmpleado.uiEmpleado.txtNombre.text(),
@@ -103,9 +103,9 @@ class mdiApp(QMainWindow):
                         self.winEmpleado.uiEmpleado.txtFechaIngreso.text()
                         )
         if empleado.eliminar() == 1:
-            self.msgBox("Datos eliminados Correctamente", QMessageBox.Information)
+            self.msgBox("Datos del empleado eliminados correctamente", QMessageBox.Information)
         else:
-            self.msgBox("Error al Eliminar los Datos", QMessageBox.Warning) 
+            self.msgBox("Error al eliminar los datos del empleado", QMessageBox.Warning) 
         
     def openWinDepartamento(self):
         self.winDepartamento=winDepartamento()
