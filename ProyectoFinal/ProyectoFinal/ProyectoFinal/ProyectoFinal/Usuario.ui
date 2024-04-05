@@ -29,79 +29,49 @@
      <x>200</x>
      <y>160</y>
      <width>391</width>
-     <height>231</height>
+     <height>221</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
-     <widget class="QLabel" name="lblCedula">
+     <widget class="QLabel" name="lblNombreCompleto">
       <property name="text">
-       <string>Cedula:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="lblNombre">
-      <property name="text">
-       <string>Nombre:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="lblApellidos">
-      <property name="text">
-       <string>Apellidos:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="lblTelefono">
-      <property name="text">
-       <string>Telefono:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="lblDireccion">
-      <property name="text">
-       <string>Direccion:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="lblPuesto">
-      <property name="text">
-       <string>Puesto:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="lblFechaIngreso">
-      <property name="text">
-       <string>Fecha de Ingreso:</string>
+       <string>Nombre Completo:</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="txtCedula"/>
+     <widget class="QLineEdit" name="txtNombreCompleto"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblCorreoElectronico">
+      <property name="text">
+       <string>Correo Electrónico</string>
+      </property>
+     </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="txtNombre"/>
+     <widget class="QLineEdit" name="txtCorreoElectronico"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="lblGenero">
+      <property name="text">
+       <string>Género:</string>
+      </property>
+     </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="txtApellidos"/>
+     <widget class="QLineEdit" name="txtGenero"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblFechaNacimiento">
+      <property name="text">
+       <string>Fecha de Nacimiento:</string>
+      </property>
+     </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="txtTelefono"/>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="txtDireccion"/>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="txtPuesto"/>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="txtFechaIngreso"/>
+     <widget class="QLineEdit" name="txtFechaNacimiento"/>
     </item>
    </layout>
   </widget>

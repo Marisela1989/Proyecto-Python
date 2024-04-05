@@ -49,18 +49,7 @@ class mdiApp(QMainWindow):
         retval=msg.exec()
         
     def guardarUsuario(self):
-        usuario=Usuarios(self.winUsuario.uiUsuario.txtCedula.text(),
-                        self.winUsuario.uiUsuario.txtNombre.text(),
-                        self.winUsuario.uiUsuario.txtApellidos.text(),
-                        self.winUsuario.uiUsuario.txtTelefono.text(),
-                        self.winUsuario.uiUsuario.txtDireccion.text(),
-                        self.winUsuario.uiUsuario.txtPuesto.text(),
-                        self.winUsuario.uiUsuario.txtFechaIngreso.text())
-        if usuario.guardar()==1:
-            self.msgBox("Datos Guardados Correctamente",QMessageBox.Information)
-        else:
-            self.msgBox("Error al Guardar los Datos",QMessageBox.Warning)
-        
+        self.msgBox("Datos Guardados Correctamente",QMessageBox.Information)
     def modificarUsuario(self):
         self.msgBox("Datos Modificados Correctamente",QMessageBox.Information)  
     def eliminarUsuario(self):
