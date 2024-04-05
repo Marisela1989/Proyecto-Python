@@ -9,7 +9,10 @@ from PyQt5.QtWidgets import QWidget
 from Ui_mdi import Ui_mdiWindow
 from Ui_Usuario import Ui_Usuario
 from Ui_empleado import Ui_Empleado
-from Model.Usuario import Usuarios
+#from Model.Usuario import Usuarios
+from Model.Usuarios import Usuarios
+from Model.Empleados import Empleados
+
 
 class mdiApp(QMainWindow):
     #init al constructor
@@ -58,7 +61,51 @@ class mdiApp(QMainWindow):
     def openWinEmpleado(self):
         self.winEmpleado=winEmpleado()
         self.uiMdi.mdiArea.addSubWindow(self.winEmpleado)
+        self.winEmpleado.uiEmpleado.btnGuardar.clicked.connect(self.guardarEmpleado)
+        self.winEmpleado.uiEmpleado.btnModificar.clicked.connect(self.modificarEmpleado)
+        self.winEmpleado.uiEmpleado.btnEliminar.clicked.connect(self.eliminarEmpleado)
         self.winEmpleado.show()
+        
+    def guardarEmpleado(self):
+        empleado=Empleados(self.winEmpleado.uiEmpleado.txtCedula.text(),
+                        self.winEmpleado.uiEmpleado.txtNombre.text(),
+                        self.winEmpleado.uiEmpleado.txtApellidos.text(),
+                        self.winEmpleado.uiEmpleado.txtTelefono.text(),
+                        self.winEmpleado.uiEmpleado.txtDireccion.text(),
+                        self.winEmpleado.uiEmpleado.txtPuesto.text(),
+                        self.winEmpleado.uiEmpleado.txtFechaIngreso.text()
+                        )
+        if empleado.guardar() == 1:
+            self.msgBox("Datos Guardados Correctamente", QMessageBox.Information)
+        else:
+            self.msgBox("Error al Guardar los Datos", QMessageBox.Warning)
+            
+    def modificarEmpleado(self):
+        empleado=Empleados(self.winEmpleado.uiEmpleado.txtCedula.text(),
+                        self.winEmpleado.uiEmpleado.txtNombre.text(),
+                        self.winEmpleado.uiEmpleado.txtApellidos.text(),
+                        self.winEmpleado.uiEmpleado.txtTelefono.text(),
+                        self.winEmpleado.uiEmpleado.txtDireccion.text(),
+                        self.winEmpleado.uiEmpleado.txtPuesto.text(),
+                        self.winEmpleado.uiEmpleado.txtFechaIngreso.text()
+                        )
+        if empleado.modificar() == 1:
+            self.msgBox("Datos Guardados Correctamente", QMessageBox.Information)
+        else:
+            self.msgBox("Error al Guardar los Datos", QMessageBox.Warning) 
+    def eliminarEmpleado(self):
+        empleado=Empleados(self.winEmpleado.uiEmpleado.txtCedula.text(),
+                        self.winEmpleado.uiEmpleado.txtNombre.text(),
+                        self.winEmpleado.uiEmpleado.txtApellidos.text(),
+                        self.winEmpleado.uiEmpleado.txtTelefono.text(),
+                        self.winEmpleado.uiEmpleado.txtDireccion.text(),
+                        self.winEmpleado.uiEmpleado.txtPuesto.text(),
+                        self.winEmpleado.uiEmpleado.txtFechaIngreso.text()
+                        )
+        if empleado.eliminar() == 1:
+            self.msgBox("Datos eliminados Correctamente", QMessageBox.Information)
+        else:
+            self.msgBox("Error al Eliminar los Datos", QMessageBox.Warning) 
         
     def openWinDepartamento(self):
         self.winDepartamento=winDepartamento()

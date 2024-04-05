@@ -1,7 +1,7 @@
 import pymongo
 
 class Empleados:
-    def __init__(self, cedula=1, nombre=2, apellidos=3, telefono=4, direccion=5, puesto=6, fechaIngreso=7):
+    def __init__(self, cedula, nombre, apellidos, telefono, direccion, puesto, fechaIngreso):
         self.cedula = cedula
         self.nombre = nombre
         self.apellidos = apellidos
@@ -25,8 +25,8 @@ class Empleados:
                     "fechaIngreso":self.fechaIngreso}
             tbl.insert_one(doc)
             estado=1
-        except Exception:
-            print("Error al guardar")
+        except Exception as e:
+            print("Error al guardar:", e)
             estado=0 
         finally:
             empleado.close
@@ -68,7 +68,7 @@ class Empleados:
             #filtro
             filtro={"_id":self.cedula}
             
-            tbl.delete_one(filtro,doc)
+            tbl.delete_one(filtro)
             estado=1
         except Exception:
             print("Error al eliminar")
