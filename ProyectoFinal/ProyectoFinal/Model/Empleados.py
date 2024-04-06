@@ -1,7 +1,7 @@
 import pymongo
 
 class Empleados:
-    def __init__(self, cedula, nombre, apellidos, telefono, direccion, puesto, fechaIngreso):
+    def __init__(self, cedula=1, nombre=2, apellidos=3, telefono=4, direccion=5, puesto=6, fechaIngreso=7):
         self.cedula = cedula
         self.nombre = nombre
         self.apellidos = apellidos

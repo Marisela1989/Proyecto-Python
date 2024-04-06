@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Departamento</class>
+ <widget class="QWidget" name="Departamento">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Departamento</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>recursos/trespatitos.jpg</normaloff>recursos/trespatitos.jpg</iconset>
+  </property>
+  <widget class="QLabel" name="lblTitulo">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>60</y>
+     <width>391</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Información de Departamentos</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>120</y>
+     <width>351</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblCodigo">
+      <property name="text">
+       <string>Código:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="txtCodigo"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblNombreDepartamento">
+      <property name="text">
+       <string>Nombre del Departamento:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="txtNombreDepartamento"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="lblImagen">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>65</y>
+     <width>191</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>recursos/Departamento.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>751</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>350</y>
+     <width>581</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btnGuardar">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>recursos/save.jpeg</normaloff>recursos/save.jpeg</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnModificar">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>recursos/editar.jpg</normaloff>recursos/editar.jpg</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnEliminar">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>recursos/delete.webp</normaloff>recursos/delete.webp</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnCancelar">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>recursos/salir.jpg</normaloff>recursos/salir.jpg</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>260</y>
+     <width>73</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Rol</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Jefatura</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Empleado</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
